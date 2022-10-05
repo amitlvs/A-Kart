@@ -28,8 +28,8 @@ export class SellerAuthComponent implements OnInit {
     this.sellerService.signUpSeller(this.signUpForm.value).subscribe((res) => {
       if (res) {
         console.log(res);
-        alert("You have successfully logged in");
-        this.router.navigate("login");
+        alert(res.data.uname + ", You have successfully logged in");
+        this.router.navigate(["login"]);
       }
     });
   }
