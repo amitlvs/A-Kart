@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const SellerRouter = require("../routes/sellerRouter");
 const cors = require("cors");
 const server = express();
-
+require("../db/config");
 server.use(bodyParser.json());
 server.use(cors());
 server.use(function (req, res, next) {
@@ -16,3 +16,5 @@ server.use(function (req, res, next) {
 server.use("/seller", SellerRouter);
 server.listen(8080);
 console.log("Listening to port 8080");
+
+module.exports = server;
