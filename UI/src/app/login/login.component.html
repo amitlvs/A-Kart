@@ -1,0 +1,13 @@
+<div class="seller-auth">
+    <div class="main">
+        <div class="login">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="" formControlName="email">
+                <input type="password" name="pswd" placeholder="Password" required="" formControlName="password">
+                <button>Login</button>
+                <p>Don't have an account !! &nbsp; <a routerLink="/seller-auth">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
