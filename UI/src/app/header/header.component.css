@@ -1,15 +1,19 @@
 .nav{
     display: flex;
     justify-content: space-around;
+    background-color: blueviolet;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 .nav h1{
+    margin-left: 15px;
     font-size: 30px;
-    color: blueviolet;
+    color: white;
 }
 .nav ul{
     display: inline-flex;
     list-style-type: none;
-    color: blueviolet;
+    color: white;
     margin: 0;
     padding: 10px;
 }
@@ -19,7 +23,7 @@
 }
 .nav li a{
     text-decoration: none;
-    color: blueviolet;
+    color: white;
 }
 .nav .search input{
     color: blueviolet;
