@@ -20,7 +20,7 @@ module.exports.loginSeller = async (req, res, next) => {
       if (verifyPassword) {
         const token = await user.generateToken();
         res.status(200).json({
-          message: `Hi ${user.name} you have successfully logged in.`,
+          message: `Hi ${user.uname} you have successfully logged in.`,
           data: user,
           token: token,
           status: true,
