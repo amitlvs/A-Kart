@@ -15,20 +15,22 @@ export class LoginComponent implements OnInit {
     private sellerService: SellerService,
     private router: Router
   ) {
-    this.loginForm = this.fb.group({
-      email: ["", [Validators.required]],
-      password: ["", [Validators.required]],
-    });
+    // this.loginForm = this.fb.group({
+    //   email: ["", [Validators.required]],
+    //   password: ["", [Validators.required]],
+    // });
   }
 
   ngOnInit(): void {}
-  login() {
-    console.warn(this.loginForm.value);
-    this.sellerService.loginSeller(this.loginForm.value).subscribe((res) => {
-      if (res) {
-        alert(`${res.message}`);
-        this.router.navigate([""]);
-      }
-    });
-  }
+  // login() {
+  //   console.warn(this.loginForm.value);
+  //   this.sellerService.loginSeller(this.loginForm.value).subscribe((res) => {
+  //     if (res) {
+  //       alert(`${res.message}`);
+  //       this.sellerService.isSellerLoggedIn.next(true);
+  //       localStorage.setItem("sellerInfo", JSON.stringify(res));
+  //       this.router.navigate(["seller-home"]);
+  //     }
+  //   });
+  // }
 }

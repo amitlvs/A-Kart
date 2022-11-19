@@ -1,13 +1,21 @@
 <nav class="nav">
     <h1>A-Kart</h1>
-    <div class="search">
+    <div class="search" *ngIf="menuType==='default'">
         <input type="text" name="search" id="">
         <button>Search</button>
     </div>
-    <ul>
-        <li><a routerLink="">HOME</a></li>
-        <li><a routerLink="seller-auth">SELLER</a></li>
-        <li><a routerLink="login">LOGIN</a></li>
-        <li><a href="#">CART(0)</a></li>
-    </ul>
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="">HOME</a></li>
+            <li><a routerLink="seller-auth">SELLER</a></li>
+            <li><a routerLink="login">LOGIN</a></li>
+            <li><a href="#">CART(0)</a></li>
+        </ul>
+        <ul *ngSwitchCase="'sellerMenu'">
+            <li><a routerLink="seller-add-product">Add Product</a></li>
+            <li><a routerLink="seller-home">Product List</a></li>
+            <li><a (click)="logout()">LOGOUT</a></li>
+            <li><a>{{userName}}</a></li>
+        </ul>
+    </div>
 </nav>

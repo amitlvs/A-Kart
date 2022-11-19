@@ -11,6 +11,11 @@ import { Error404Component } from "./error404/error404.component";
 import { LoginComponent } from "./login/login.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { SellerHomeComponent } from "./seller-home/seller-home.component";
+import { SellerProductListComponent } from "./seller-product-list/seller-product-list.component";
+import { SellerAddProductComponent } from "./seller-add-product/seller-add-product.component";
+import { ToastrModule } from "ngx-toastr";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,6 +25,9 @@ import { HttpClientModule } from "@angular/common/http";
     SellerAuthComponent,
     Error404Component,
     LoginComponent,
+    SellerHomeComponent,
+    SellerProductListComponent,
+    SellerAddProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +36,8 @@ import { HttpClientModule } from "@angular/common/http";
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

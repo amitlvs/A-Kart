@@ -1,14 +1,23 @@
 <div class="seller-auth">
     <div class="main">
-        <h2>Seller Sign Up</h2>
+        <input type="checkbox" id="chk" aria-hidden="true">
+
         <div class="signup">
             <form [formGroup]="signUpForm" (ngSubmit)="signup()">
                 <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" placeholder="User name" required="" formControlName="uname">
-                <input type="email" name="email" placeholder="Email" required="" formControlName="email">
-                <input type="password" name="pswd" placeholder="Password" required="" formControlName="password">
+                <input type="text" name="txt" placeholder="User name" formControlName="uname" required="">
+                <input type="email" name="email" placeholder="Email" formControlName="email" required="">
+                <input type="password" name="pswd" placeholder="Password" formControlName="password" required="">
                 <button>Sign up</button>
-                <p>Already have an account !! &nbsp;<a routerLink="/login"> Login</a></p>
+            </form>
+        </div>
+
+        <div class="login">
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" formControlName="email" required="">
+                <input type="password" name="pswd" placeholder="Password" formControlName="password" required="">
+                <button>Login</button>
             </form>
         </div>
     </div>
